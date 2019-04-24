@@ -1,11 +1,3 @@
-//
-//  EnumError.swift
-//  VipCoin
-//
-//  Created by Woxapp on 11.01.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 protocol EnumErrorProtocol {

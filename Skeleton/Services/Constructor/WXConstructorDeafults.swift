@@ -1,11 +1,3 @@
-//
-//  ConstructorDefaultObjects.swift
-//  Skeleton
-//
-//  Created by Woxapp on 08.02.2019.
-//  Copyright © 2019 Woxapp. All rights reserved.
-//
-
 import UIKit
 import RxDataSources
 

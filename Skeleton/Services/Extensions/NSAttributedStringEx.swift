@@ -1,11 +1,3 @@
-//
-//  NSAttributedStringEx.swift
-//  SpaceIn
-//
-//  Created by Woxapp on 20.03.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 extension NSAttributedString {

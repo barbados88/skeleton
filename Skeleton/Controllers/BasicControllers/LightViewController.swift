@@ -1,11 +1,3 @@
-//
-//  LightViewController.swift
-//  Skeleton
-//
-//  Created by Woxapp on 15.03.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 // implements light title theme for navigation and status bar

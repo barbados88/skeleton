@@ -1,11 +1,3 @@
-//
-//  DefaultCell.swift
-//  SpaceIn
-//
-//  Created by Woxapp on 22.03.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 typealias ImageBlock = (UIImage?) -> Void

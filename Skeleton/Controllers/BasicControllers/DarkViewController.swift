@@ -1,11 +1,3 @@
-//
-//  DarkViewController.swift
-//  Skeleton
-//
-//  Created by Woxapp on 15.03.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 // implements dark title theme for navigation and status bar

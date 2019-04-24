@@ -1,11 +1,3 @@
-//
-//  Xmpl3ViewController.swift
-//  Skeleton
-//
-//  Created by Woxapp on 11.04.2019.
-//  Copyright © 2019 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 class Xmpl3ViewController: DarkViewController {

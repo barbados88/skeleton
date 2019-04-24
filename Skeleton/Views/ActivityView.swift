@@ -1,11 +1,3 @@
-//
-//  ActivityView.swift
-//  tamak
-//
-//  Created by mac on 04.01.17.
-//  Copyright © 2017 woxapp. All rights reserved.
-//
-
 import UIKit
 
 class ActivityFooterView: UIView {

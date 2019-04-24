@@ -1,11 +1,3 @@
-//
-//  AnyPickerView.swift
-//  VipCoin
-//
-//  Created by Woxapp on 08.02.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 typealias UpdateBlock = (Any) -> Void

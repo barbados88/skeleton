@@ -1,11 +1,3 @@
-//
-//  TapableLabel.swift
-//  SpaceIn
-//
-//  Created by Woxapp on 03.05.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 typealias TapableBlock = (String) -> Void

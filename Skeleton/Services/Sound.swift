@@ -1,11 +1,3 @@
-//
-//  Sound.swift
-//  Incognito
-//
-//  Created by Woxapp on 25.12.2017.
-//  Copyright © 2017 Woxapp. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 import AudioToolbox

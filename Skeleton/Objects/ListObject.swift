@@ -1,11 +1,3 @@
-//
-//  ListObject.swift
-//  VipCoin
-//
-//  Created by Woxapp on 10.01.2018.
-//  Copyright © 2018 Woxapp. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 

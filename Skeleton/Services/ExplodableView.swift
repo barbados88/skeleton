@@ -1,11 +1,3 @@
-//
-//  ExplodableView.swift
-//  Incognito
-//
-//  Created by Woxapp on 11.12.2017.
-//  Copyright © 2017 Woxapp. All rights reserved.
-//
-
 import UIKit
 
 private let goldenRatio: CGFloat = 0.625

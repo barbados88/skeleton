@@ -1,11 +1,3 @@
-//
-//  WXObject.swift
-//  Skeleton
-//
-//  Created by Woxapp on 11.04.2019.
-//  Copyright © 2019 Woxapp. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 import Alamofire
