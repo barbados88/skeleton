@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LfN-U0-Fb2" customClass="ActivityFooterView" customModule="Skeleton" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PC9-6a-75G">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-O9-XDL">
+                    <rect key="frame" x="177.5" y="2.5" width="20" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PC9-6a-75G" firstAttribute="top" secondItem="LfN-U0-Fb2" secondAttribute="top" id="0xm-7b-YP5"/>
+                <constraint firstItem="iWK-O9-XDL" firstAttribute="centerY" secondItem="LfN-U0-Fb2" secondAttribute="centerY" constant="-5" id="6XF-CC-bZP"/>
+                <constraint firstAttribute="bottom" secondItem="PC9-6a-75G" secondAttribute="bottom" id="GUh-eV-9xh"/>
+                <constraint firstAttribute="trailing" secondItem="PC9-6a-75G" secondAttribute="trailing" id="IO3-Fk-IsX"/>
+                <constraint firstItem="iWK-O9-XDL" firstAttribute="centerX" secondItem="LfN-U0-Fb2" secondAttribute="centerX" id="L9P-hi-ty3"/>
+                <constraint firstItem="PC9-6a-75G" firstAttribute="leading" secondItem="LfN-U0-Fb2" secondAttribute="leading" id="wew-bL-JeP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="hh3-gE-U1u"/>
+            <point key="canvasLocation" x="39" y="-68"/>
+        </view>
+    </objects>
+</document>

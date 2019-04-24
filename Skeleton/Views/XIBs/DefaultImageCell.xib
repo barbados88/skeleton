@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="defaultImageCell" id="iAf-8f-cJp" customClass="DefaultCell" customModule="SpaceIn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iAf-8f-cJp" id="RMG-Ru-q8e">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" image="cw_logo" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-sr-q1v">
+                        <rect key="frame" x="16" y="7" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="bXc-28-SZb"/>
+                            <constraint firstAttribute="width" constant="30" id="h1l-OZ-Ok4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADO-ZP-yBq">
+                        <rect key="frame" x="61" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRV-xN-558">
+                        <rect key="frame" x="317" y="12" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GHo-sr-q1v" firstAttribute="centerY" secondItem="RMG-Ru-q8e" secondAttribute="centerY" id="2At-4r-a4l"/>
+                    <constraint firstItem="GHo-sr-q1v" firstAttribute="leading" secondItem="RMG-Ru-q8e" secondAttribute="leading" constant="16" id="Hhp-GW-V0a"/>
+                    <constraint firstItem="ADO-ZP-yBq" firstAttribute="centerY" secondItem="RMG-Ru-q8e" secondAttribute="centerY" id="Jso-ae-Vbw"/>
+                    <constraint firstItem="vRV-xN-558" firstAttribute="centerY" secondItem="RMG-Ru-q8e" secondAttribute="centerY" id="ckA-k3-fm8"/>
+                    <constraint firstItem="ADO-ZP-yBq" firstAttribute="leading" secondItem="GHo-sr-q1v" secondAttribute="trailing" constant="15" id="p5Y-qJ-hKU"/>
+                    <constraint firstItem="vRV-xN-558" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ADO-ZP-yBq" secondAttribute="trailing" constant="10" id="pNl-5K-Fbt"/>
+                    <constraint firstAttribute="trailing" secondItem="vRV-xN-558" secondAttribute="trailing" constant="16" id="xxc-lX-TWC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="detailsLabel" destination="vRV-xN-558" id="str-MK-7YR"/>
+                <outlet property="iconImageView" destination="GHo-sr-q1v" id="Agd-Df-1IV"/>
+                <outlet property="nameLabel" destination="ADO-ZP-yBq" id="LpU-4q-6Y9"/>
+            </connections>
+            <point key="canvasLocation" x="127" y="-50"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cw_logo" width="46" height="45"/>
+    </resources>
+</document>

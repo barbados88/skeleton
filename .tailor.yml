@@ -1,0 +1,4 @@
+include:
+    - Skeleton
+exclude:
+    - Skeleton/Pods      # Ignore Swift files under "Pods/"

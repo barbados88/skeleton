@@ -1,0 +1,6 @@
+use this command in terminal to get schema, where 
+endpoint is your graphql host
+
+apollo schema:download --endpoint=http://localhost:8080/graphql schema.json
+
+apollo run script must be below Pods
