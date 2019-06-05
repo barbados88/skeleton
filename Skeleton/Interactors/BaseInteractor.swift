@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import ObjectMapper
 
 protocol BaseInteractor {
 
@@ -45,6 +46,10 @@ extension BaseInteractor {
 
     func deleteObjects<T>(type: T, predicate: NSPredicate? = nil, parameters: [String: Any]? = nil) -> Observable<Bool> {
         return Observable.just(true)
+    }
+    
+    func sendRequest<R: Mappable>(request: ObjectAPIRequest) -> Observable<WXResponse<R>> {
+        return CommunicatorRx.shared.objectRequest(object: request)
     }
 
 }

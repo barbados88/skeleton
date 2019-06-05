@@ -5,6 +5,13 @@ import RxAlamofire
 import RxSwift
 import ObjectMapper
 
+class WXError: NSObject {
+    
+    var code: Int = 0
+    var text: String? = nil
+    
+}
+
 class WXResponse<T>: NSObject {
 
     var request: URLRequest? = nil
@@ -12,6 +19,7 @@ class WXResponse<T>: NSObject {
     var array: [T]? = nil
     var string: String? = nil
     var data: Data? = nil
+    var error: WXError? = nil
 
 }
 

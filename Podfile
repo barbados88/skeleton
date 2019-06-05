@@ -1,4 +1,3 @@
-source 'https://git.woxapp.com/libs/my_specs_ios.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '10.0'

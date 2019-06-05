@@ -60,5 +60,29 @@ class WXObject: Object, Mappable {
     override open class func ignoredProperties() -> [String] {
         return ["reuqest"]
     }
+    
+    override open class func primaryKey() -> String {
+        return "id"
+    }
+    
+    static func existed<T: WXObject>(useId: Int = Session.id) -> T {
+        guard
+            let object = Utils.shared.staticRealm.object(ofType: T.self, forPrimaryKey: useId)
+            else {
+                let some = T()
+                some.id = useId
+                some.writeBlock { realm in
+                    realm.add(some, update: .all)
+                }
+                return self.existed()
+        }
+        return object.detached()
+    }
+    
+    func saveToRealm() {
+        writeBlock { realm in
+            realm.schema[(type(of: self) as Object.Type).className()]?.primaryKeyProperty != nil ? realm.add(self, update: .modified) : realm.add(self)
+        }
+    }
 
 }

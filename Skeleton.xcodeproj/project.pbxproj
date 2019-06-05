@@ -110,6 +110,7 @@
 		65EC5E241FC4280700EA7857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E231FC4280700EA7857 /* Assets.xcassets */; };
 		65EC5E271FC4280700EA7857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E251FC4280700EA7857 /* LaunchScreen.storyboard */; };
 		65F3521522647B98004100EC /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3521422647B98004100EC /* ExampleObject.swift */; };
+		CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6E5722A7FBC000932E4D /* RObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +222,7 @@
 		65EC5E261FC4280700EA7857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65EC5E281FC4280700EA7857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F3521422647B98004100EC /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
+		CEEA6E5722A7FBC000932E4D /* RObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RObject.swift; sourceTree = "<group>"; };
 		D54E674A807BF6520939D1B1 /* Pods-Skeleton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skeleton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Skeleton/Pods-Skeleton.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -486,6 +488,7 @@
 				65F3521322647924004100EC /* Pojo */,
 				65887599204FCC2B0048D8BC /* ListObject.swift */,
 				652D5E9B225F26FF0045BBCC /* WXObject.swift */,
+				CEEA6E5722A7FBC000932E4D /* RObject.swift */,
 				65F3521422647B98004100EC /* ExampleObject.swift */,
 			);
 			path = Objects;
@@ -615,7 +618,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Skeleton/Pods-Skeleton-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Skeleton/Pods-Skeleton-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
@@ -627,6 +630,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
@@ -643,12 +647,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Skeleton/Pods-Skeleton-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Skeleton/Pods-Skeleton-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		41AE26D37C264E5320FCD72C /* [CP] Check Pods Manifest.lock */ = {
@@ -767,6 +772,7 @@
 				65191F29204E7EAC00259A54 /* DataEx.swift in Sources */,
 				652B78E31FFFC18D00BA34BD /* RealmEx.swift in Sources */,
 				657BA34B1FC453C500557E0B /* Utils.swift in Sources */,
+				CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */,
 				657BA3471FC4536200557E0B /* NotificationEx.swift in Sources */,
 				652B78F11FFFC2E700BA34BD /* Footer.swift in Sources */,
 				657BA36E1FC45BB700557E0B /* DoubleEx.swift in Sources */,
