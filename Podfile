@@ -16,7 +16,7 @@ target 'Skeleton' do
 	pod 'RxRealm'
 	pod 'RxAlamofire'
 	pod 'RxSwift'
-    	pod 'RxCocoa'
+  pod 'RxCocoa'
 	pod 'RxDataSources'
 
 end

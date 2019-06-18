@@ -111,6 +111,8 @@
 		65EC5E271FC4280700EA7857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E251FC4280700EA7857 /* LaunchScreen.storyboard */; };
 		65F3521522647B98004100EC /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3521422647B98004100EC /* ExampleObject.swift */; };
 		CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6E5722A7FBC000932E4D /* RObject.swift */; };
+		CEF707AB22B9292D002EF687 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */; };
+		CEF707AD22B9299B002EF687 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF707AC22B9299B002EF687 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,6 +225,8 @@
 		65EC5E281FC4280700EA7857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F3521422647B98004100EC /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
 		CEEA6E5722A7FBC000932E4D /* RObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RObject.swift; sourceTree = "<group>"; };
+		CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
+		CEF707AC22B9299B002EF687 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		D54E674A807BF6520939D1B1 /* Pods-Skeleton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skeleton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Skeleton/Pods-Skeleton.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +284,7 @@
 				652B78DE1FFFC18C00BA34BD /* RealmEx.swift */,
 				652B78DF1FFFC18C00BA34BD /* UIButtonEx.swift */,
 				652B78DD1FFFC18C00BA34BD /* UIImageEx.swift */,
+				CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */,
 				652B78E01FFFC18C00BA34BD /* UILabelEx.swift */,
 				657BA3401FC44FAC00557E0B /* UIAppliationEx.swift */,
 				657BA3461FC4536200557E0B /* NotificationEx.swift */,
@@ -488,6 +493,7 @@
 				65F3521322647924004100EC /* Pojo */,
 				65887599204FCC2B0048D8BC /* ListObject.swift */,
 				652D5E9B225F26FF0045BBCC /* WXObject.swift */,
+				CEF707AC22B9299B002EF687 /* Photo.swift */,
 				CEEA6E5722A7FBC000932E4D /* RObject.swift */,
 				65F3521422647B98004100EC /* ExampleObject.swift */,
 			);
@@ -508,6 +514,8 @@
 		65F3521322647924004100EC /* Pojo */ = {
 			isa = PBXGroup;
 			children = (
+				CEF707A922B928E5002EF687 /* Response */,
+				CEF707A722B928BA002EF687 /* Request */,
 			);
 			path = Pojo;
 			sourceTree = "<group>";
@@ -520,6 +528,20 @@
 				113F30587348348737289349 /* Pods-Skeleton.analyze.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEF707A722B928BA002EF687 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		CEF707A922B928E5002EF687 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,7 +578,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Woxapp;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					65EC5E181FC4280700EA7857 = {
 						CreatedOnToolsVersion = 9.1;
@@ -751,6 +773,7 @@
 				652D5E9C225F26FF0045BBCC /* WXObject.swift in Sources */,
 				652D5EB0225F3CDC0045BBCC /* LightViewController.swift in Sources */,
 				65191F33204E7EC900259A54 /* NoInternetView.swift in Sources */,
+				CEF707AB22B9292D002EF687 /* UIImageViewEx.swift in Sources */,
 				652D5E9F225F2F5F0045BBCC /* IntercatorProvider.swift in Sources */,
 				65C9B710225B58010037E6B4 /* RxEx.swift in Sources */,
 				658AF4F4225CF1FF00F9DB36 /* IntEx.swift in Sources */,
@@ -806,6 +829,7 @@
 				652D5EA3225F2F8D0045BBCC /* WXProvider.swift in Sources */,
 				652D5EB2225F3D140045BBCC /* NotificatedViewController.swift in Sources */,
 				657BA34F1FC4545200557E0B /* Formatter.swift in Sources */,
+				CEF707AD22B9299B002EF687 /* Photo.swift in Sources */,
 				6591A5B42266F826008B0C7D /* API.swift in Sources */,
 				6588D9FA225E407F0094BF14 /* BaseViewModel.swift in Sources */,
 				65ADEA33220DC20E00BA2A96 /* WXConstructor.swift in Sources */,
