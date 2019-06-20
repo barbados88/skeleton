@@ -110,6 +110,7 @@
 		65EC5E241FC4280700EA7857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E231FC4280700EA7857 /* Assets.xcassets */; };
 		65EC5E271FC4280700EA7857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E251FC4280700EA7857 /* LaunchScreen.storyboard */; };
 		65F3521522647B98004100EC /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3521422647B98004100EC /* ExampleObject.swift */; };
+		CEE4E17C22BBB35B006EA600 /* ExampleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */; };
 		CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6E5722A7FBC000932E4D /* RObject.swift */; };
 		CEF707AB22B9292D002EF687 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */; };
 		CEF707AD22B9299B002EF687 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF707AC22B9299B002EF687 /* Photo.swift */; };
@@ -224,6 +225,7 @@
 		65EC5E261FC4280700EA7857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65EC5E281FC4280700EA7857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F3521422647B98004100EC /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
+		CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRequest.swift; sourceTree = "<group>"; };
 		CEEA6E5722A7FBC000932E4D /* RObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RObject.swift; sourceTree = "<group>"; };
 		CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
 		CEF707AC22B9299B002EF687 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 		CEF707A722B928BA002EF687 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -554,7 +557,6 @@
 				41AE26D37C264E5320FCD72C /* [CP] Check Pods Manifest.lock */,
 				4153CFEFDA2DD87E3DB172F1 /* [CP] Embed Pods Frameworks */,
 				65EC5E161FC4280700EA7857 /* Frameworks */,
-				6591A5B22266F60F008B0C7D /* Generate Apollo GraphQL API */,
 				65EC5E151FC4280700EA7857 /* Sources */,
 				65EC5E171FC4280700EA7857 /* Resources */,
 				657BA3511FC455AC00557E0B /* ShellScript */,
@@ -722,24 +724,6 @@
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
 		};
-		6591A5B22266F60F008B0C7D /* Generate Apollo GraphQL API */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Apollo GraphQL API";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
-		};
 		72FC3AEE1FBC01F5636EF73B /* Tailor */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -810,6 +794,7 @@
 				657BA3411FC44FAC00557E0B /* UIAppliationEx.swift in Sources */,
 				6582CA4C2260B6B400CFC7B9 /* TabBarAnimation.swift in Sources */,
 				652B78F21FFFC2E700BA34BD /* OKView.swift in Sources */,
+				CEE4E17C22BBB35B006EA600 /* ExampleRequest.swift in Sources */,
 				652D5EA9225F3A030045BBCC /* Xmpl2ViewController.swift in Sources */,
 				657BA3611FC4593200557E0B /* ActivityView.swift in Sources */,
 				65ADEA31220DC0A800BA2A96 /* WXConstructorDeafults.swift in Sources */,
