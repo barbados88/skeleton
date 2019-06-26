@@ -13,10 +13,6 @@ class ServerError: NSObject {
     private static var dictionary: [Int: String] {
         var dict: [Int: String] = [:]
         dict[777] = NSLocalizedString("Пожалуйста, проверьте подключение к сети.", comment: "")
-        dict[778] = NSLocalizedString("Неверный формат имени.", comment: "")
-        dict[779] = NSLocalizedString("Неверный формат телефона.", comment: "")
-        dict[780] = NSLocalizedString("Неверный формат email.", comment: "")
-        dict[781] = NSLocalizedString("Неверный формат ссылки.", comment: "")
         return dict
     }
 

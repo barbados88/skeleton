@@ -140,7 +140,7 @@ class WXTableConstructor: NSObject, UITableViewDelegate, UITableViewDataSource, 
     }
 
     private func registerNIBs() {
-        for id in WXIdentifier.cells {
+        for id in WXIdentifier.tableCells {
             tableView.register(UINib(nibName: id.rawValue.firstUppercased, bundle: nil), forCellReuseIdentifier: id.rawValue)
         }
         for id in WXIdentifier.headers {

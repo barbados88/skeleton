@@ -15,18 +15,18 @@ enum SocialType: Int {
 
     var placeholder: String {
         switch self {
-        case .sms: return NSLocalizedString("Введите код из смс", comment: "")
-        case .viber, .whatsapp, .facebook, .telegram: return NSLocalizedString("Введите код из сообщения", comment: "")
+        case .sms: return NSLocalizedString("enter_code_sms", comment: "")
+        case .viber, .whatsapp, .facebook, .telegram: return NSLocalizedString("enter_code_messageя", comment: "")
         }
     }
 
     var actionTitle: String {
         switch self {
-        case .viber: return NSLocalizedString("Получить через Viber", comment: "")
-        case .whatsapp: return NSLocalizedString("Получить через WhatsApp", comment: "")
-        case .sms: return NSLocalizedString("Получить через SMS", comment: "")
-        case .facebook: return NSLocalizedString("Получить через Facebook", comment: "")
-        case .telegram: return NSLocalizedString("Получить через Telegram", comment: "")
+        case .viber: return NSLocalizedString("with_viber", comment: "")
+        case .whatsapp: return NSLocalizedString("with_whatsapp", comment: "")
+        case .sms: return NSLocalizedString("with_sms", comment: "")
+        case .facebook: return NSLocalizedString("with_facebook", comment: "")
+        case .telegram: return NSLocalizedString("with_telegram", comment: "")
         }
     }
 
@@ -40,7 +40,7 @@ enum SocialType: Int {
 
 class CodePoster: NSObject {
 
-    var message: String = NSLocalizedString("Выберите способ получения кода для входа", comment: "")
+    var message: String = NSLocalizedString("select_way", comment: "")
 
     public override init() {
         super.init()
@@ -52,7 +52,7 @@ class CodePoster: NSObject {
 
     private func cutedActionSheet(block: CodeHandler) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Отмена", comment: ""), style: .cancel, handler: { _ in }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("cancel_title", comment: ""), style: .cancel, handler: { _ in }))
         for object in SocialType.shortList {
             alert.addAction(UIAlertAction(title: object.actionTitle, style: .default, handler: { _ in
                 object.action(block: block)
@@ -63,7 +63,7 @@ class CodePoster: NSObject {
 
     private func fullActionSheet(block: CodeHandler) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Отмена", comment: ""), style: .cancel, handler: { _ in }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("cancel_title", comment: ""), style: .cancel, handler: { _ in }))
         for object in SocialType.fullList {
             alert.addAction(UIAlertAction(title: object.actionTitle, style: .default, handler: { _ in
                 object.action(block: block)

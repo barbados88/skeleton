@@ -4,11 +4,15 @@ enum WXIdentifier: String {
 
     case def = "defaultCell"
     case defImage = "defaultImageCell"
+    
     case header = "header"
     case alignmentHeader = "alignmentHeader"
     case buttonHeader = "buttonHeader"
 
-    static let cells: [WXIdentifier] = [def, defImage]
+    
+    
+    static let tableCells: [WXIdentifier] = [def, defImage]
+    static let collectionCells: [WXIdentifier] = []
     static let headers: [WXIdentifier] = [header, alignmentHeader, buttonHeader]
 
 }

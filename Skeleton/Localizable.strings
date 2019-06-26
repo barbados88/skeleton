@@ -1,0 +1,60 @@
+"no_name" = "Undefined name";
+"cancel_title" = "Cancel";
+
+//date and time
+
+"today_title" = "Today";
+"yesterday_title" = "Yesterday";
+"tomorrow_title" = "Tomorrow";
+"tomorrow_at" = "Tomorrow at %@";
+"just_now" = "Just now";
+"minute_1" = "minute";
+"minute_2" = "minutes";
+"minute_3" = "minutes";
+"time_ago" = "ago";
+"hour_1" = "hour";
+"hour_2" = "hours";
+"hour_3" = "hours";
+"day_1" = "day";
+"day_2" = "days";
+"day_3" = "days";
+"week_1" = "week";
+"week_2" = "weeks";
+"week_3" = "weeks";
+
+//terms
+
+"agree_part" = "I agree with";
+"terms_and_conditions" = "Terms and conditions Terms of Payment Processing, Privacy Policy";
+
+// code poster
+
+"enter_code_sms" = "Enter code from sms";
+"enter_code_message" = "Enter code from message";
+"with_viber" = "Get with Viber";
+"with_whatsapp" = "Get with WhatsApp";
+"with_sms" = "Get with SMS";
+"with_facebook" = "Get with facebook";
+"with_telegram" = "Get with Telegram";
+"select_way" = "Select the way to get code for enter";
+
+// validator
+
+"value_is_nil" = "Validated value is nil";
+"value_too_short" = "Number is too short";
+"value_too_long" = "Number is tool long";
+"not_registered" = "Number is not registered";
+"password_too_short" = "The password length must be more than 6 symbols";
+"passwords_not_equal" = "Passworda are not equal";
+"wrong_password" = "The password is wrong";
+"touch_id_enter" = "Enter the app using TouchID?";
+"face_id_enter" = "Enter the app using FaceID?";
+"touch_id_description" = "To use Touch ID it must be switched on in app settings";
+"face_id_description" = "To use Face ID it must be switched on in app settings";
+"wrong_format" = "Wrong format of validated value";
+"url_is_nil" = "The url is nil";
+"cant_open_url" = "The url cannot be opened by the app";
+
+// local errors
+
+"internet_connection" = "Please, check internet connection";

@@ -13,19 +13,19 @@ class TapableLabel: UILabel, UIGestureRecognizerDelegate {
 
     var tapBlock: TapableBlock? = nil
 
-    @IBInspectable var plainText: String = NSLocalizedString("I agree with", comment: "") {
+    @IBInspectable var plainText: String = NSLocalizedString("agree_part", comment: "") {
         didSet {
             pText = plainText
         }
     }
 
-    @IBInspectable var attrText: String = NSLocalizedString("Terms and conditions Terms of Payment Processing, Privacy Policy", comment: "") {
+    @IBInspectable var attrText: String = NSLocalizedString("terms_and_conditions", comment: "") {
         didSet {
             aText = attrText
         }
     }
 
-    @IBInspectable var partText: String = NSLocalizedString(": if you cancel booking, you will be fully charged anyway", comment: "") {
+    @IBInspectable var partText: String = NSLocalizedString("", comment: "") {
         didSet {
             lText = partText
         }

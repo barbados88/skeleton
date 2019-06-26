@@ -20,6 +20,10 @@ public enum ValidateItem: String {
     case numbers = "[0-9]"
     case password = "[A-Z0-9a-z-\\p{Cyrillic}]{5,}"
     case floats = "(\\d+(\\,\\d+)?)"
+    
+    var errorString: String {
+        return NSLocalizedString("wrong_format", comment: "")
+    }
 
 }
 
@@ -39,16 +43,16 @@ public struct ValidValue: ValidateOption {
         }
     }
 
-    public var isValid: Bool {
-        return item == .link ? isValidLink : predicate.evaluate(with: body)
+    public var isValid: EnumErrorProtocol {
+        return item == .link ? isValidLink : predicate.evaluate(with: body) ? WXValidationError() : WXValidationError(with: .error(item.errorString))
     }
 
-    private var isValidLink: Bool {
+    private var isValidLink: EnumErrorProtocol {
         guard let url = URL(string: self.body)
             else {
-                return false
+                return WXValidationError(with: .error(NSLocalizedString("url_is_nil", comment: "")))
         }
-        return UIApplication.shared.canOpenURL(url)
+        return UIApplication.shared.canOpenURL(url) ? WXValidationError() : WXValidationError(with: .error(NSLocalizedString("cant_open_url", comment: "")))
     }
 
     public init(body: String, type: ValidateItem) {
@@ -60,10 +64,10 @@ public struct ValidValue: ValidateOption {
 
 open class Validator: NSObject {
 
-    class func isValid(_ some: String?, type: ValidateItem) -> Bool {
+    class func isValid(_ some: String?, type: ValidateItem) -> EnumErrorProtocol {
         guard let some = some
             else {
-                return false
+                return DefaultError()
         }
         return ValidValue(body: some, type: type).isValid
     }

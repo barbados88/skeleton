@@ -28,7 +28,7 @@ class ListObject {
 
 class ChainedObject: NSObject {
 
-    var name: String? = NSLocalizedString("Undefined name", comment: "")
+    var name: String? = NSLocalizedString("no_name", comment: "")
     var details: String? = nil
     var id: Int = 0
     var isSelected: Bool = false

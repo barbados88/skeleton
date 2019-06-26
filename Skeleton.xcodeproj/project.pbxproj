@@ -110,6 +110,7 @@
 		65EC5E241FC4280700EA7857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E231FC4280700EA7857 /* Assets.xcassets */; };
 		65EC5E271FC4280700EA7857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E251FC4280700EA7857 /* LaunchScreen.storyboard */; };
 		65F3521522647B98004100EC /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3521422647B98004100EC /* ExampleObject.swift */; };
+		CE98FF4422C397E600D758BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE98FF4322C397E600D758BD /* Localizable.strings */; };
 		CEE4E17C22BBB35B006EA600 /* ExampleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */; };
 		CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6E5722A7FBC000932E4D /* RObject.swift */; };
 		CEF707AB22B9292D002EF687 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */; };
@@ -225,6 +226,7 @@
 		65EC5E261FC4280700EA7857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65EC5E281FC4280700EA7857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F3521422647B98004100EC /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
+		CE98FF4322C397E600D758BD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRequest.swift; sourceTree = "<group>"; };
 		CEEA6E5722A7FBC000932E4D /* RObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RObject.swift; sourceTree = "<group>"; };
 		CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				65EC5E251FC4280700EA7857 /* LaunchScreen.storyboard */,
 				65EC5E231FC4280700EA7857 /* Assets.xcassets */,
 				65EC5E281FC4280700EA7857 /* Info.plist */,
+				CE98FF4322C397E600D758BD /* Localizable.strings */,
 				657BA3501FC4553700557E0B /* -Bridging-Header.h */,
 				659BC78122661ED0008536FB /* schema.json */,
 				6591A5B32266F826008B0C7D /* API.swift */,
@@ -656,6 +659,7 @@
 				657BA32E1FC43D0700557E0B /* Authentification.storyboard in Resources */,
 				65EC5E241FC4280700EA7857 /* Assets.xcassets in Resources */,
 				6591905820049DAE00C09304 /* ActivityView.xib in Resources */,
+				CE98FF4422C397E600D758BD /* Localizable.strings in Resources */,
 				65191F3C204E7ED400259A54 /* AnyPickerView.xib in Resources */,
 				658AF4ED225CF1DC00F9DB36 /* DefaultCell.xib in Resources */,
 				657BA3301FC43DD000557E0B /* FirstTab.storyboard in Resources */,

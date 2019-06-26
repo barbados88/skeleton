@@ -1,9 +1,42 @@
 import UIKit
 
-protocol EnumErrorProtocol {
+public protocol EnumErrorProtocol {
 
     var title: String? { get }
 
+}
+
+class DefaultError: EnumErrorProtocol {
+    
+    var title: String? {
+        return NSLocalizedString("value_is_nil", comment: "")
+    }
+    
+}
+
+enum WXValidationEnum {
+    
+    case none, error(String)
+    
+}
+
+class WXValidationError: EnumErrorProtocol {
+    
+    public init() {}
+    
+    public init(with enumValue: WXValidationEnum) {
+        value = enumValue
+    }
+    
+    var value: WXValidationEnum = .none
+    
+    var title: String? {
+        switch value {
+        case .none: return nil
+        case .error(let string): return string
+        }
+    }
+    
 }
 
 enum PhoneError: EnumErrorProtocol {
@@ -16,9 +49,9 @@ enum PhoneError: EnumErrorProtocol {
     var title: String? {
         switch self {
         case .none: return nil
-        case .short: return NSLocalizedString("Слишком короткий номер", comment: "")
-        case .long: return NSLocalizedString("Слишком длинный номер", comment: "")
-        case .exist: return NSLocalizedString("Номер не зарегистрирован", comment: "")
+        case .short: return NSLocalizedString("value_too_short", comment: "")
+        case .long: return NSLocalizedString("value_too_long", comment: "")
+        case .exist: return NSLocalizedString("not_registered", comment: "")
         }
     }
 
@@ -34,9 +67,9 @@ enum PasswordError: EnumErrorProtocol {
     var title: String? {
         switch self {
         case .none: return nil
-        case .short: return NSLocalizedString("Пароль должен быть не меньше 6 символов", comment: "")
-        case .mismatch: return NSLocalizedString("Пароли не совпадают", comment: "")
-        case .error: return NSLocalizedString("Неверный пароль", comment: "")
+        case .short: return NSLocalizedString("password_too_short", comment: "")
+        case .mismatch: return NSLocalizedString("passwords_not_equal", comment: "")
+        case .error: return NSLocalizedString("wrong_password", comment: "")
         }
     }
 
@@ -51,16 +84,16 @@ enum IDError: EnumErrorProtocol {
     var title: String? {
         switch self {
         case .none: return nil
-        case .touch: return NSLocalizedString("Войти в приложение используя TouchID?", comment: "")
-        case .face: return NSLocalizedString("Войти в приложение используя FaceID?", comment: "")
+        case .touch: return NSLocalizedString("touch_id_enter", comment: "")
+        case .face: return NSLocalizedString("face_id_enter", comment: "")
         }
     }
 
     var explanation: String? {
         switch self {
         case .none: return nil
-        case .touch: return NSLocalizedString("Для использования разблокировки по Touch ID необходимо настроить Touch ID в настройках приложения.", comment: "")
-        case .face: return NSLocalizedString("Для использования разблокировки по FaceID ID необходимо настроить FaceID ID в настройках приложения.", comment: "")
+        case .touch: return NSLocalizedString("touch_id_description", comment: "")
+        case .face: return NSLocalizedString("face_id_description", comment: "")
         }
     }
 

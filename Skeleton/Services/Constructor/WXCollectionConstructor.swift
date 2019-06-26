@@ -10,7 +10,7 @@ class WXCollectionConstructor: NSObject, UICollectionViewDelegate, UICollectionV
             reloadCells()
         }
     }
-    var collectionView: UICollectionView = UICollectionView() {
+    var collectionView: UICollectionView? = nil {
         didSet {
             registerNIBs()
         }
@@ -21,19 +21,19 @@ class WXCollectionConstructor: NSObject, UICollectionViewDelegate, UICollectionV
     public init(collectionView: UICollectionView, info: ConstructorSuperClass, refreshable: Bool = false) {
         super.init()
         self.collectionView = collectionView
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
+        self.collectionView?.delegate = self
+        self.collectionView?.dataSource = self
         self.registerNIBs()
         self.info = info
-        self.collectionView.reloadData()
+        self.collectionView?.reloadData()
     }
 
     private func registerNIBs() {
-        for id in WXIdentifier.cells {
-            collectionView.register(UINib(nibName: id.rawValue.firstUppercased, bundle: nil), forCellWithReuseIdentifier: id.rawValue)
+        for id in WXIdentifier.collectionCells {
+            collectionView?.register(UINib(nibName: id.rawValue.firstUppercased, bundle: nil), forCellWithReuseIdentifier: id.rawValue)
         }
         for id in WXIdentifier.headers {
-            collectionView.register(UINib(nibName: id.rawValue.firstUppercased, bundle: nil), forSupplementaryViewOfKind: id.rawValue, withReuseIdentifier: id.rawValue)
+            collectionView?.register(UINib(nibName: id.rawValue.firstUppercased, bundle: nil), forSupplementaryViewOfKind: id.rawValue, withReuseIdentifier: id.rawValue)
         }
     }
 
@@ -42,7 +42,9 @@ class WXCollectionConstructor: NSObject, UICollectionViewDelegate, UICollectionV
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return info.sectionInfo[indexPath.section].data[indexPath.row].size
+        let size = info.sectionInfo[indexPath.section].data[indexPath.row].size
+        return CGSize(width: size.width == 0 ? collectionView.frame.width : size.width,
+                      height: size.height == 0 ? collectionView.frame.height : size.height)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,7 +59,7 @@ class WXCollectionConstructor: NSObject, UICollectionViewDelegate, UICollectionV
     }
 
     private func reloadCells() {
-        collectionView.reloadData()
+        collectionView?.reloadData()
     }
 
     // MARK: - UIScrollView methods

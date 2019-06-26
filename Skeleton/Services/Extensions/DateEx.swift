@@ -36,10 +36,10 @@ extension Date {
 
     var chatTime: String {
         if isToday == true {
-            return "\(NSLocalizedString("Сегодня", comment: "")), \(Formatter.formatter(using: .time).string(from: self))"
+            return "\(NSLocalizedString("today_title", comment: "")), \(Formatter.formatter(using: .time).string(from: self))"
         }
         if isYesterday == true {
-            return "\(NSLocalizedString("Вчера", comment: "")), \(Formatter.formatter(using: .time).string(from: self))"
+            return "\(NSLocalizedString("yesterday_title", comment: "")), \(Formatter.formatter(using: .time).string(from: self))"
         }
         return Formatter.formatter(using: .anchor).string(from: self)
     }
@@ -54,11 +54,11 @@ extension Date {
             comps.day = comps.day! - i
             let referenceDate = calendar.date(from: comps)!
             if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == -1 {
-                return NSLocalizedString("Завтра", comment: "")
+                return NSLocalizedString("tomorrow_title", comment: "")
             } else if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == 0 {
-                return NSLocalizedString("Сегодня", comment: "")
+                return NSLocalizedString("today_title", comment: "")
             } else if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == 1 {
-                return NSLocalizedString("Вчера", comment: "")
+                return NSLocalizedString("yesterday_title", comment: "")
             }
         }
         return longDate
@@ -75,11 +75,11 @@ extension Date {
             comps.day = comps.day! - i
             let referenceDate = calendar.date(from: comps)!
             if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == -1 {
-                return String(format: "\(NSLocalizedString("Tomorrow", comment: "")) %@", dateFormatter.string(from: self))
+                return String(format: "\(NSLocalizedString("tomorrow_title", comment: "")) %@", dateFormatter.string(from: self))
             } else if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == 0 {
-                return NSLocalizedString("Today", comment: "")
+                return NSLocalizedString("today_title", comment: "")
             } else if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == 1 {
-                return String(format: "\(NSLocalizedString("Yesterday", comment: "")) %@", dateFormatter.string(from: self))
+                return String(format: "\(NSLocalizedString("yesterday_title", comment: "")) %@", dateFormatter.string(from: self))
             } else if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame {
                 return thisWeek
             }
@@ -98,7 +98,7 @@ extension Date {
             comps.day = comps.day! - i
             let referenceDate = calendar.date(from: comps)!
             if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == -1 {
-                return String(format: "Завтра в %@", dateFormatter.string(from: self))
+                return String(format: "%@", NSLocalizedString("tomorrow_at", comment: ""), dateFormatter.string(from: self))
             } else if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == 0 {
                 return today
             } else if suppliedDate?.compare(referenceDate) == ComparisonResult.orderedSame && i == 1 {
@@ -130,19 +130,19 @@ extension Date {
     private var today: String {
         let timeInterval: Int = Int(floor(fabs(self.timeIntervalSinceNow / 60)))
         if timeInterval < 60 {
-            return timeInterval == 0 ? NSLocalizedString("Только что", comment: "") : String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("минуту", comment: ""), NSLocalizedString("минуты", comment: ""), NSLocalizedString("минут", comment: "")], number: timeInterval), NSLocalizedString("назад", comment: ""))
+            return timeInterval == 0 ? NSLocalizedString("just_now", comment: "") : String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("minute_1", comment: ""), NSLocalizedString("minute_2", comment: ""), NSLocalizedString("minute_3", comment: "")], number: timeInterval), NSLocalizedString("time_ago", comment: ""))
         }
-        return String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("час", comment: ""), NSLocalizedString("часа", comment: ""), NSLocalizedString("часов", comment: "")], number: timeInterval / 60), NSLocalizedString("назад", comment: ""))
+        return String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("hour_1", comment: ""), NSLocalizedString("hour_2", comment: ""), NSLocalizedString("hour_3", comment: "")], number: timeInterval / 60), NSLocalizedString("time_ago", comment: ""))
     }
 
     private var thisWeek: String {
         let timeInterval: Int = Int(floor(fabs(self.timeIntervalSinceNow / 86400)))
-        return String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("день", comment: ""), NSLocalizedString("дня", comment: ""), NSLocalizedString("дней", comment: "")], number: timeInterval), NSLocalizedString("назад", comment: ""))
+        return String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("day_1", comment: ""), NSLocalizedString("day_2", comment: ""), NSLocalizedString("day_3", comment: "")], number: timeInterval), NSLocalizedString("time_ago", comment: ""))
     }
 
     private var thisMonth: String {
         let timeInterval: Int = Int(floor(fabs(self.timeIntervalSinceNow / 86400) / 7))
-        return String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("неделя", comment: ""), NSLocalizedString("недели", comment: ""), NSLocalizedString("недель", comment: "")], number: timeInterval), NSLocalizedString("назад", comment: ""))
+        return String(format: "%@ %@", String.endOfWord(words: [NSLocalizedString("week_1", comment: ""), NSLocalizedString("week_2", comment: ""), NSLocalizedString("week_3", comment: "")], number: timeInterval), NSLocalizedString("time_ago", comment: ""))
     }
 
     private var thisYear: String {
