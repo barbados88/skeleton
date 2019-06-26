@@ -45,5 +45,6 @@ extension BaseViewModel {
     func deleteObjects<T>(type: T, predicate: NSPredicate? = nil, parameters: [String: Any]? = nil) -> Observable<Bool> {
         return Observable.just(true)
     }
+    
 
 }

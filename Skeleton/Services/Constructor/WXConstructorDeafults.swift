@@ -42,11 +42,19 @@ enum CellSettings {
 
 // default object to fill standard cell fields
 
+class InfoImage: NSObject {
+    
+    var image: UIImage? = nil
+    var placeholder: UIImage? = nil
+    var imageUrl: String? = nil
+    
+}
+
 class DefaultObject: NSObject {
 
     var title: String? = nil
     var details: String? = nil
-    var image: UIImage? = nil
+    var image: InfoImage? = nil
     var object: Any? = nil
 
 }

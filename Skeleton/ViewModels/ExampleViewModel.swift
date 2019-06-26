@@ -11,7 +11,7 @@ class ExampleViewModel: BaseViewModel {
 
     public init(){}
 
-    private var repo: ExampleInteractor? = nil
+    private var repo: ExampleInteractor!
 
     public init(interactor: ExampleInteractor) {
         repo = interactor
@@ -29,6 +29,24 @@ class ExampleViewModel: BaseViewModel {
         return repo!.sendRequest(request: request)
             .flatMap({ response -> Observable<MapExampleObject> in
                 return Observable.just(response.dictionary ?? MapExampleObject())
+            })
+    }
+    
+    // Universal API data access
+    
+    func getDictionaryData<R: RObject>(object: RObject, typeOf: R.Type) -> Observable<R> {
+        return repo.sendRequest(request: object.request)
+            .flatMap({ response -> Observable<R> in
+                return Observable.just(response.dictionary!)
+            })
+    }
+    
+    // WXObject or RObject? maybe should be one superClass
+    
+    func getArrayData<R: WXObject>(object: RObject, typeOf: R.Type) -> Observable<[R]> {
+        return repo.sendRequest(request: object.request)
+            .flatMap({ response -> Observable<[R]> in
+                return Observable.just(response.array! as [R])
             })
     }
 

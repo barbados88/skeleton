@@ -309,7 +309,9 @@
 		657BA35B1FC4593200557E0B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				658AF4EF225CF1E500F9DB36 /* DefaultCell.swift */,
+				CE98FF3722C33CB500D758BD /* XIBs */,
+				CE98FF3622C33CA900D758BD /* CollectionCells */,
+				CE98FF3522C33C9800D758BD /* TableCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -322,8 +324,6 @@
 				65191F38204E7ED400259A54 /* AnyPickerView.xib */,
 				65191F37204E7ED400259A54 /* ButtonHeader.xib */,
 				65191F36204E7ED400259A54 /* NoInternetView.xib */,
-				658AF4EB225CF1DC00F9DB36 /* DefaultCell.xib */,
-				658AF4EC225CF1DC00F9DB36 /* DefaultImageCell.xib */,
 				6591905720049DAE00C09304 /* ActivityView.xib */,
 				652B78E91FFFC2D700BA34BD /* Header.xib */,
 				652B78EA1FFFC2D700BA34BD /* OKView.xib */,
@@ -530,6 +530,46 @@
 				113F30587348348737289349 /* Pods-Skeleton.analyze.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE98FF3522C33C9800D758BD /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				658AF4EF225CF1E500F9DB36 /* DefaultCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		CE98FF3622C33CA900D758BD /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		CE98FF3722C33CB500D758BD /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				CE98FF3922C33CC500D758BD /* TableCells */,
+				CE98FF3822C33CBC00D758BD /* CollectionCells */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		CE98FF3822C33CBC00D758BD /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		CE98FF3922C33CC500D758BD /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				658AF4EB225CF1DC00F9DB36 /* DefaultCell.xib */,
+				658AF4EC225CF1DC00F9DB36 /* DefaultImageCell.xib */,
+			);
+			path = TableCells;
 			sourceTree = "<group>";
 		};
 		CEF707A722B928BA002EF687 /* Request */ = {
