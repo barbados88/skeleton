@@ -28,7 +28,7 @@ extension UIViewController: MotionDelegate {
         return false
     }
 
-    func removeActivity(animated: Bool) {
+    func removeActivity(animated: Bool = true) {
         for subview in view.subviews {
             if subview is ActivityView {
                 UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
