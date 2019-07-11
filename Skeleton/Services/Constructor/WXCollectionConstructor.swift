@@ -36,6 +36,10 @@ class WXCollectionConstructor: NSObject, UICollectionViewDelegate, UICollectionV
             collectionView?.register(UINib(nibName: id.rawValue.firstUppercased, bundle: nil), forSupplementaryViewOfKind: id.rawValue, withReuseIdentifier: id.rawValue)
         }
     }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return info.sectionInfo.count
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return info.sectionInfo[section].data.count
@@ -54,8 +58,15 @@ class WXCollectionConstructor: NSObject, UICollectionViewDelegate, UICollectionV
         return cell
     }
 
+    // to perform simple row slide animation before action use tableView extension
+    // animateCellSelection(at indexPath: IndexPath, _ block: @escaping () -> ())
+    // slides desired cell to the right, other cells down
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        info.sectionInfo[indexPath.section].data[indexPath.row].action()
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let data = info.sectionInfo[indexPath.section].data[indexPath.row]
+        data.action()
+        handler?(indexPath, data.info)
     }
 
     private func reloadCells() {

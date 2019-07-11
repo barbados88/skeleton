@@ -117,6 +117,10 @@ class WXTableConstructor: NSObject, UITableViewDelegate, UITableViewDataSource, 
         cell.configure(data as AnyObject)
         return cell
     }
+    
+    // to perform simple row slide animation before action use tableView extension
+    // animateCellSelection(at indexPath: IndexPath, _ block: @escaping () -> ())
+    // slides desired cell to the right, other cells to the left
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

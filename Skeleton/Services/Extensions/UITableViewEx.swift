@@ -32,5 +32,31 @@ extension UITableView {
         }
         return false
     }
+    
+    func animateCellSelection(at indexPath: IndexPath, _ block: @escaping () -> ()) {
+        guard let array = indexPathsForVisibleRows else { return }
+        for i in 0..<array.count {
+            let delay = Double(i) * 0.1
+            let path = array[i]
+            guard let cell = cellForRow(at: path) else { continue }
+            var desiredFrame = cell.frame
+            desiredFrame.origin.x = path.row == indexPath.row && path.section == indexPath.section ? desiredFrame.size.width : -desiredFrame.size.width
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                self.animateCell(cell, to: desiredFrame)
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(array.count) * 0.1) {
+            block()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.reloadData()
+            })
+        }
+    }
+    
+    private func animateCell(_ cell: UITableViewCell, to frame: CGRect) {
+        UIView.animate(withDuration: 0.3) {
+            cell.frame = frame
+        }
+    }
 
 }
