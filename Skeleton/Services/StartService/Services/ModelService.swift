@@ -24,4 +24,20 @@ class ModelService: NSObject {
         _ = try? Realm()
     }
 
+    // use this func to get access to realm from several sources
+    // for example: app and today extension will use the same db
+    
+    private func migrateSharedDB() {
+        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "YOUR_GROUP_IDENTIFIER")
+        var config = Realm.Configuration()
+        config.fileURL = container!.appendingPathComponent("default.realm")
+        config.migrationBlock = { migration, oldSchemaVersion in
+            if oldSchemaVersion < DBVersion {
+                // do the stuff
+            }
+        }
+        Realm.Configuration.defaultConfiguration = config
+        _ = try? Realm()
+    }
+    
 }

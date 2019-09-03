@@ -1,0 +1,93 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Apollo (0.10.1):
+    - Apollo/Core (= 0.10.1)
+  - Apollo/Core (0.10.1)
+  - Crashlytics (3.13.1):
+    - Fabric (~> 1.10.1)
+  - Differentiator (4.0.1)
+  - Fabric (1.10.1)
+  - ObjectMapper (3.4.2)
+  - ReachabilitySwift (4.3.1)
+  - Realm (3.16.0):
+    - Realm/Headers (= 3.16.0)
+  - Realm/Headers (3.16.0)
+  - RealmSwift (3.16.0):
+    - Realm (= 3.16.0)
+  - RxAlamofire (5.0.0):
+    - RxAlamofire/Core (= 5.0.0)
+  - RxAlamofire/Core (5.0.0):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRealm (1.0.0):
+    - RealmSwift (~> 3.14)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SDWebImage (5.0.4):
+    - SDWebImage/Core (= 5.0.4)
+  - SDWebImage/Core (5.0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - Apollo
+  - Crashlytics
+  - Fabric
+  - ObjectMapper
+  - ReachabilitySwift
+  - RealmSwift
+  - RxAlamofire
+  - RxCocoa
+  - RxDataSources
+  - RxRealm
+  - RxSwift
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Apollo
+    - Crashlytics
+    - Differentiator
+    - Fabric
+    - ObjectMapper
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
+    - RxAlamofire
+    - RxCocoa
+    - RxDataSources
+    - RxRealm
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Apollo: 4d690a9b2e48e8820182df4b988d7a253e1ee589
+  Crashlytics: 5aa8e90dcbf2f34898b4f5a0037787531246cca0
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Fabric: f6f21452846788bb44595d73e9909d79d328e617
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  Realm: 5ca1b8c472dfc532cd0ba0bfe2ce49f97130158f
+  RealmSwift: 2ee401dbcc188706261921326146f5a539d4d4a7
+  RxAlamofire: e7875a012aff55345672d0f70a2a9cd6aeb0f211
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRealm: 1e81dcfca1fb50c3e9b3e1f8102bc875c5156a2e
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SDWebImage: c739016e4bdf0a4a1f9a04b5e0385395ad63a282
+
+PODFILE CHECKSUM: 817a2d51e1f6e6b5ed9cb1738f9dad5d3ab0a3ec
+
+COCOAPODS: 1.7.0

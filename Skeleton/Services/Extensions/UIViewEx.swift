@@ -37,7 +37,60 @@ enum GradientDirection {
 
 }
 
+enum HoleShape {
+    
+    case square, circle
+    
+    func holeIn(view: UIView, rect: CGRect) {
+        switch self {
+        case .square: view.squareHole(rect: rect)
+        case .circle: view.circleHole(rect: rect)
+        }
+    }
+    
+}
+
 extension UIView {
+    
+    private var defaultY: CGFloat {
+        get {
+            let barHeight = UIApplication.topViewController()?.navigationController?.navigationBar.frame.height ?? 0
+            let statusBarHeight = UIApplication.shared.isStatusBarHidden ? CGFloat(0) : UIApplication.shared.statusBarFrame.height
+            return barHeight + statusBarHeight
+        }
+    }
+    
+    func bindToKeyboard(constant: NSLayoutConstraint? = nil) {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIView.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UIView.keyboardWillHhide(notification:)), name: .UIKeyboardWillHide, object: constant)
+    }
+    
+    func unbindToKeyboard(){
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        let size = (notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue.size
+        let keyboardY = UIScreen.main.bounds.size.height - size.height
+        let viewY = frame.size.height + frame.origin.y + defaultY
+        if keyboardY < viewY {
+            let deltaY = viewY - keyboardY
+            UIView.animate(withDuration: 0.3) {
+                self.superview?.frame.origin.y = -deltaY
+            }
+        }
+    }
+    
+    @objc func keyboardWillHhide(notification: Notification) {
+        UIView.animate(withDuration: 0.3) {
+            self.superview?.frame.origin.y = self.defaultY
+        }
+        guard let constraint = notification.object as? NSLayoutConstraint
+            else {
+                return
+        }
+        constraint.constant = 0
+    }
 
     func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
@@ -48,11 +101,11 @@ extension UIView {
         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
     }
 
-    func addHole(rect: CGRect, isCircle: Bool) {
-        isCircle == true ? circleHole(rect: rect) : squareHole(rect: rect)
+    func addHole(rect: CGRect, shape: HoleShape) {
+        shape.holeIn(view: self, rect: rect)
     }
-
-    private func squareHole(rect: CGRect) {
+    
+    func squareHole(rect: CGRect) {
         let maskLayer = CAShapeLayer()
         maskLayer.frame = bounds
         let path = UIBezierPath(rect: bounds)
@@ -61,11 +114,10 @@ extension UIView {
         maskLayer.path = path.cgPath
         layer.mask = maskLayer
     }
-
-    private func circleHole(rect: CGRect) {
+    
+    func circleHole(rect: CGRect) {
         let maskLayer = CAShapeLayer()
         maskLayer.frame = bounds
-        maskLayer.fillColor = UIColor.black.cgColor
         let radius: CGFloat = rect.width / 2
         let boundsRect = CGRect(x: rect.origin.x - radius, y: rect.origin.y, width: 2 * radius, height: 2 * radius)
         let path = UIBezierPath(rect: bounds)
