@@ -33,6 +33,10 @@ class Communicator: NSObject {
         block?(true, type)
     }
 
+    class func send(request: String, completion: @escaping([String: Any]) -> ()) {
+        sendRequest(request: request, method: .get, completion: completion)
+    }
+    
 }
 
 class CommunicatorRx: NSObject {

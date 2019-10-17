@@ -61,8 +61,8 @@ extension UIView {
     }
     
     func bindToKeyboard(constant: NSLayoutConstraint? = nil) {
-        NotificationCenter.default.addObserver(self, selector: #selector(UIView.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(UIView.keyboardWillHhide(notification:)), name: .UIKeyboardWillHide, object: constant)
+        NotificationCenter.default.addObserver(self, selector: #selector(UIView.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UIView.keyboardWillHhide(notification:)), name: UIResponder.keyboardWillHideNotification, object: constant)
     }
     
     func unbindToKeyboard(){
@@ -70,7 +70,7 @@ extension UIView {
     }
     
     @objc func keyboardWillShow(notification: Notification) {
-        let size = (notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue.size
+        let size = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue.size
         let keyboardY = UIScreen.main.bounds.size.height - size.height
         let viewY = frame.size.height + frame.origin.y + defaultY
         if keyboardY < viewY {

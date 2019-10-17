@@ -6,6 +6,7 @@ class WXProvider: NSObject {
 
     private var iProvider: InteractorProvider = InteractorProvider()
     var mProvider: ViewModelProvider = ViewModelProvider()
+    var router: WXRouter!
 
     public override init() {
         super.init()

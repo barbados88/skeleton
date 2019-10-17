@@ -179,6 +179,7 @@ class Requester: NSObject {
         }
         let encoding: ParameterEncoding = method == .get ? URLEncoding.default : JSONEncoding.default
         manager.request(request, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { response in
+            saveCookies(response: response)
             ResponseValidator.checkResponse(response: response, completion: { response in
                 completion(response)
             })
@@ -195,6 +196,18 @@ class Requester: NSObject {
             }
         }
         rManager?.startListening()
+    }
+    
+    private class func saveCookies(response: DataResponse<Any>) {
+        print("tada")
+        if let headerFields = response.response?.allHeaderFields as? [String: String] {
+            let url = response.response?.url
+            let cookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url!)
+            var cookieArray : [[HTTPCookiePropertyKey: Any]] = []
+            for cookie in cookies {
+                cookieArray.append(cookie.properties!)
+            }
+        }
     }
 
 }

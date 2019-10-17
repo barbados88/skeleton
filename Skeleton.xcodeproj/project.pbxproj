@@ -112,6 +112,7 @@
 		65F3521522647B98004100EC /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3521422647B98004100EC /* ExampleObject.swift */; };
 		CE0D455E22D47F3700632D67 /* SweetHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D455D22D47F3700632D67 /* SweetHMAC.swift */; };
 		CE98FF4422C397E600D758BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE98FF4322C397E600D758BD /* Localizable.strings */; };
+		CEC26C012358831500A67097 /* WXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC26C002358831500A67097 /* WXRouter.swift */; };
 		CEE4E17C22BBB35B006EA600 /* ExampleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */; };
 		CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6E5722A7FBC000932E4D /* RObject.swift */; };
 		CEF707AB22B9292D002EF687 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */; };
@@ -229,6 +230,7 @@
 		65F3521422647B98004100EC /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
 		CE0D455D22D47F3700632D67 /* SweetHMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetHMAC.swift; sourceTree = "<group>"; };
 		CE98FF4322C397E600D758BD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CEC26C002358831500A67097 /* WXRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXRouter.swift; sourceTree = "<group>"; };
 		CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRequest.swift; sourceTree = "<group>"; };
 		CEEA6E5722A7FBC000932E4D /* RObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RObject.swift; sourceTree = "<group>"; };
 		CEF707AA22B9292D002EF687 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				652D5E9E225F2F5F0045BBCC /* IntercatorProvider.swift */,
 				652D5EA0225F2F780045BBCC /* ViewModelProvider.swift */,
+				CEC26C002358831500A67097 /* WXRouter.swift */,
 				652D5EA2225F2F8D0045BBCC /* WXProvider.swift */,
 			);
 			path = Provider;
@@ -852,6 +855,7 @@
 				652B78E51FFFC18D00BA34BD /* UILabelEx.swift in Sources */,
 				658AF4F6225CF1FF00F9DB36 /* NSAttributedStringEx.swift in Sources */,
 				652D5EA7225F2FEA0045BBCC /* ExampleViewModel.swift in Sources */,
+				CEC26C012358831500A67097 /* WXRouter.swift in Sources */,
 				65ADEA36220DC55400BA2A96 /* WXTableConstructor.swift in Sources */,
 				657BA33F1FC44DA200557E0B /* ServerError.swift in Sources */,
 				65ADEA3A220DC85600BA2A96 /* UICollectionViewCellEx.swift in Sources */,
@@ -971,7 +975,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 34E36S4VZ8;
+				DEVELOPMENT_TEAM = 7NSV578WV6;
 				INFOPLIST_FILE = Skeleton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1102,7 +1106,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 34E36S4VZ8;
+				DEVELOPMENT_TEAM = 7NSV578WV6;
 				INFOPLIST_FILE = Skeleton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1120,7 +1124,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 34E36S4VZ8;
+				DEVELOPMENT_TEAM = 7NSV578WV6;
 				INFOPLIST_FILE = Skeleton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

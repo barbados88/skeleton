@@ -2,6 +2,15 @@ import UIKit
 import RxSwift
 import ObjectMapper
 
+class SomeRouterModel: RouterModel {
+    
+    public init(with data: Info) {
+        super.init()
+        info = data
+    }
+    
+}
+
 class SomeDataClass: Info {
 
     override init(with object: Any) {
@@ -144,7 +153,7 @@ class XmplViewController: DarkViewController {
         // iOs natural - initTable
         initTable()
     }
-
+    
     // MARK: - Actions
 
     @IBAction func sendRequest(_ sender: UIBarButtonItem) {
@@ -189,7 +198,8 @@ class XmplViewController: DarkViewController {
     private func initTable() {
         constructor = WXConstructor(with: tableView, object: SomeDataClass(with: []), refreshable: true).tableConstructor
         constructor?.handler = { path, object in
-            self.performSegue(withIdentifier: path.section == 0 ? "push" : "present", sender: nil)
+            WXProvider.shared.router.showModel(model: SomeRouterModel(with: self.constructor!.info as! Info))
+//            self.performSegue(withIdentifier: path.section == 0 ? "push" : "present", sender: nil)
         }
     }
 
