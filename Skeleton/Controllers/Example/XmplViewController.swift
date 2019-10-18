@@ -4,9 +4,39 @@ import ObjectMapper
 
 class SomeRouterModel: RouterModel {
     
+    private lazy var viewModel: ExampleViewModel = {
+        return WXProvider.shared.mProvider.viewModel
+    }()
+    
     public init(with data: Info) {
         super.init()
         info = data
+        startSettings()
+    }
+    
+    private func startSettings() {
+        tableSettings = { table in
+            table.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
+        }
+        navigationSettings = { nvc in
+            nvc?.navigationBar.backgroundColor = .red
+            nvc?.navigationItem.title = "SomeRouterModel"
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.loadData()
+        }
+    }
+    
+    private func loadData() {
+        let object = MapExampleObject()
+        viewModel.sendRequest(type: object, request: object.request)
+            .applyIOSchedulers()
+            .subscribe(onNext: { [weak self] response in
+                self?.onDataUpdate(ResponseClass(with: response))
+            }, onError: { error in
+                print(error.localizedDescription)
+            })
+            .disposed(by: disposeBag)
     }
     
 }
@@ -198,7 +228,9 @@ class XmplViewController: DarkViewController {
     private func initTable() {
         constructor = WXConstructor(with: tableView, object: SomeDataClass(with: []), refreshable: true).tableConstructor
         constructor?.handler = { path, object in
+            // use router to travel about the screens
             WXProvider.shared.router.showModel(model: SomeRouterModel(with: self.constructor!.info as! Info))
+            // or use system navigation pattern
 //            self.performSegue(withIdentifier: path.section == 0 ? "push" : "present", sender: nil)
         }
     }

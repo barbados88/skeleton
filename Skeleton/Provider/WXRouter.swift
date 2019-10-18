@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class RouterModel: NSObject {
     
@@ -14,6 +15,8 @@ class RouterModel: NSObject {
     var tableSettings: ((UITableView) -> ())? = { _ in }
     var navigationSettings: ((UINavigationController?) -> ())? = { nvc in }
     var onDataUpdate: (ConstructorSuperClass) -> () = { _ in }
+    
+    var disposeBag: DisposeBag = DisposeBag()
     
 }
 

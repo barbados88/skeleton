@@ -43,23 +43,11 @@ class ContainerViewController: NotificatedViewController {
     }
     
     private func startSettings() {
-        model?.tableSettings = { table in
-            table == nil ? () : self.applyTableSettings(from: table!)
-        }
-        model?.navigationSettings = { navigation in
-            navigation == nil ? () : self.applyNavigationSettings(from: navigation!)
-        }
+        model?.tableSettings?(tableView)
+        model?.navigationSettings?(navigationController)
         model?.onDataUpdate = { info in
             self.constructor?.info = info
         }
-    }
-    
-    private func applyTableSettings(from table: UITableView) {
-        // apply all settings which were set in model
-    }
-    
-    private func applyNavigationSettings(from nvc: UINavigationController) {
-        // apply all settings which were set in model
     }
     
 }

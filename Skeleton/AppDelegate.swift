@@ -8,17 +8,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         applyRootViewController()
-        applyRouter()
         return true
     }
 
     private func applyRootViewController() {
         let storyboard = UIStoryboard(name: Session.accessToken == nil ? "Authentification" : "Main", bundle: nil)
-        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "root")
-    }
-
-    private func applyRouter() {
-        WXProvider.shared.router = WXRouter(with: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "navigation") as! NavigationController)
+        let nvc = storyboard.instantiateViewController(withIdentifier: "root")
+        window?.rootViewController = nvc
+        WXProvider.shared.router = WXRouter(with: nvc as! NavigationController)
     }
     
 }
