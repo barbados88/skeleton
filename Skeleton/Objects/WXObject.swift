@@ -8,6 +8,7 @@ protocol ObjectRequest {
     var request: String { set get }
     var parameters: [String: Any] { set get }
     var method: Alamofire.HTTPMethod { set get }
+    var headers: [String: String]? { set get }
 
 }
 
@@ -22,6 +23,7 @@ class ObjectGetRequest: ObjectRequest {
     var request: String = APIConfigs.request(part: "")
     var parameters: [String: Any] = [:] // mappers should be used
     var method: Alamofire.HTTPMethod = .get
+    var headers: [String: String]? = nil
 
 }
 

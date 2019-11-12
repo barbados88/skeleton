@@ -45,8 +45,8 @@ class CommunicatorRx: NSObject {
     private var requester = RequesterRx()
     private var disposeBag: DisposeBag = DisposeBag()
 
-    private func sendRequest<T: Mappable>(request: String, method: Alamofire.HTTPMethod, parameters: [String: Any]? = nil) -> Observable<WXResponse<T>> {
-        return requester.sendRequest(request: request, method: method, parameters: parameters)
+    private func sendRequest<T: Mappable>(request: String, method: Alamofire.HTTPMethod, parameters: [String: Any]? = nil, headers: [String: String]? = nil) -> Observable<WXResponse<T>> {
+        return requester.sendRequest(request: request, method: method, parameters: parameters, headers: headers)
     }
 
     // USAGE:
@@ -93,7 +93,7 @@ class CommunicatorRx: NSObject {
 
     func objectRequest<T: Mappable>(object: ObjectAPIRequest) -> Observable<WXResponse<T>> {
         let request = object.current
-        return sendRequest(request: request.request, method: request.method, parameters: request.parameters)
+        return sendRequest(request: request.request, method: request.method, parameters: request.parameters, headers: request.headers)
     }
 
 }

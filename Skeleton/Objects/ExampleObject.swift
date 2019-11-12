@@ -20,6 +20,7 @@ class MapExampleRequest: ObjectRequest {
     var request: String = "https://raw.githubusercontent.com/tristanhimmelman/AlamofireObjectMapper/d8bb95982be8a11a2308e779bb9a9707ebe42ede/sample_json"
     var parameters: [String: Any] = [:]
     var method: HTTPMethod = .get
+    var headers: [String : String]? = nil
 
 }
 

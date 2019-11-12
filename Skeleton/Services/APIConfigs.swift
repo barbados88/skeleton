@@ -4,29 +4,12 @@ import UIKit
 
 public struct APIConfigs {
 
-    static var timeoutInterval: Double {
-        return 30
-    }
-
-    public var userPhone: String {
-        return Session.phone?.replacingOccurrences(of: "+", with: "") ?? ""
-    }
-
-    public var uuid: String {
-        return UIDevice.current.identifierForVendor!.uuidString
-    }
-
-    public var accessToken: String {
-        return Session.accessToken ?? ""
-    }
-
-    public var deviceToken: String {
-        return Session.deviceToken ?? ""
-    }
-
-    public var userID: Int {
-        return Session.id
-    }
+    static var timeoutInterval: Double = 30
+    public var userPhone: String = Session.phone?.replacingOccurrences(of: "+", with: "") ?? ""
+    public var uuid: String = UIDevice.current.identifierForVendor!.uuidString
+    public var accessToken: String = Session.accessToken ?? ""
+    public var deviceToken: String = Session.deviceToken ?? ""
+    public var userID: Int = Session.id
 
     static var apiPrefix: String {
         return ""
@@ -38,6 +21,10 @@ public struct APIConfigs {
 
     static func request(part: String) -> String {
         return "\(apiPrefix)\(part)"
+    }
+    
+    static var headers: [String: String] {
+        return ["X-Signature": Session.accessToken ?? ""]
     }
 
 }

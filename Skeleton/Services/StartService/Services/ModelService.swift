@@ -30,6 +30,7 @@ class ModelService: NSObject {
     private func migrateSharedDB() {
         let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "YOUR_GROUP_IDENTIFIER")
         var config = Realm.Configuration()
+        config.schemaVersion = DBVersion
         config.fileURL = container!.appendingPathComponent("default.realm")
         config.migrationBlock = { migration, oldSchemaVersion in
             if oldSchemaVersion < DBVersion {

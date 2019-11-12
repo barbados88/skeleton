@@ -14,6 +14,7 @@ class SuperRequest: ObjectRequest {
     var request: String = ""
     var parameters: [String: Any] = [:]
     var method: HTTPMethod = .post
+    var headers: [String: String]? = APIConfigs.headers
     
 }
 
