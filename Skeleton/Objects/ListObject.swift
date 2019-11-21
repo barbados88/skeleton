@@ -33,5 +33,6 @@ class ChainedObject: NSObject {
     var id: Int = 0
     var isSelected: Bool = false
     var object: Object? = nil
+    var anyObject: Any? = nil
 
 }

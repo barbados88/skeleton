@@ -4,7 +4,7 @@ class CircularAnimation: NSObject {
 
     private let lineWidth: CGFloat = 1.5
     private let duration: TimeInterval = 0.7
-    private let lineColor: UIColor = Session.tintColor
+    private let lineColor: UIColor = WXColors.mainAppColor.color
     private let animationContainer: UIView = UIView()
 
     var tabBar: UITabBar = UITabBar() {
@@ -50,7 +50,7 @@ class CircularAnimation: NSObject {
 
         let bezierPath = UIBezierPath()
 
-        layer.strokeColor = Session.tintColor.cgColor
+        layer.strokeColor = WXColors.mainAppColor.color.cgColor
         layer.fillColor = UIColor.clear.cgColor
         layer.lineWidth = lineWidth
 

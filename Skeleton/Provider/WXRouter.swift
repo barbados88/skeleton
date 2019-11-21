@@ -11,6 +11,7 @@ import RxSwift
 class RouterModel: NSObject {
     
     var info: Info!
+    var anyObject: Any?
     
     var tableSettings: ((UITableView) -> ())? = { _ in }
     var navigationSettings: ((UINavigationController?) -> ())? = { nvc in }

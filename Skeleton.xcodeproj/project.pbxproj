@@ -36,7 +36,7 @@
 		652B78F21FFFC2E700BA34BD /* OKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B78EF1FFFC2E600BA34BD /* OKView.swift */; };
 		652B78F61FFFC80900BA34BD /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B78F51FFFC80900BA34BD /* Sound.swift */; };
 		652D5E9C225F26FF0045BBCC /* WXObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652D5E9B225F26FF0045BBCC /* WXObject.swift */; };
-		652D5E9F225F2F5F0045BBCC /* IntercatorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652D5E9E225F2F5F0045BBCC /* IntercatorProvider.swift */; };
+		652D5E9F225F2F5F0045BBCC /* InteractorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652D5E9E225F2F5F0045BBCC /* InteractorProvider.swift */; };
 		652D5EA1225F2F780045BBCC /* ViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652D5EA0225F2F780045BBCC /* ViewModelProvider.swift */; };
 		652D5EA3225F2F8D0045BBCC /* WXProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652D5EA2225F2F8D0045BBCC /* WXProvider.swift */; };
 		652D5EA5225F2FD70045BBCC /* ExampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652D5EA4225F2FD70045BBCC /* ExampleInteractor.swift */; };
@@ -112,6 +112,7 @@
 		65F3521522647B98004100EC /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3521422647B98004100EC /* ExampleObject.swift */; };
 		CE0D455E22D47F3700632D67 /* SweetHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D455D22D47F3700632D67 /* SweetHMAC.swift */; };
 		CE98FF4422C397E600D758BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE98FF4322C397E600D758BD /* Localizable.strings */; };
+		CEB952922386CDD40030EEC1 /* WXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB952912386CDD40030EEC1 /* WXColors.swift */; };
 		CEC26C012358831500A67097 /* WXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC26C002358831500A67097 /* WXRouter.swift */; };
 		CEE4E17C22BBB35B006EA600 /* ExampleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */; };
 		CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6E5722A7FBC000932E4D /* RObject.swift */; };
@@ -151,7 +152,7 @@
 		652B78EF1FFFC2E600BA34BD /* OKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OKView.swift; sourceTree = "<group>"; };
 		652B78F51FFFC80900BA34BD /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		652D5E9B225F26FF0045BBCC /* WXObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXObject.swift; sourceTree = "<group>"; };
-		652D5E9E225F2F5F0045BBCC /* IntercatorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntercatorProvider.swift; sourceTree = "<group>"; };
+		652D5E9E225F2F5F0045BBCC /* InteractorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProvider.swift; sourceTree = "<group>"; };
 		652D5EA0225F2F780045BBCC /* ViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvider.swift; sourceTree = "<group>"; };
 		652D5EA2225F2F8D0045BBCC /* WXProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXProvider.swift; sourceTree = "<group>"; };
 		652D5EA4225F2FD70045BBCC /* ExampleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleInteractor.swift; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 		65F3521422647B98004100EC /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
 		CE0D455D22D47F3700632D67 /* SweetHMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetHMAC.swift; sourceTree = "<group>"; };
 		CE98FF4322C397E600D758BD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CEB952912386CDD40030EEC1 /* WXColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXColors.swift; sourceTree = "<group>"; };
 		CEC26C002358831500A67097 /* WXRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXRouter.swift; sourceTree = "<group>"; };
 		CEE4E17B22BBB35B006EA600 /* ExampleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRequest.swift; sourceTree = "<group>"; };
 		CEEA6E5722A7FBC000932E4D /* RObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RObject.swift; sourceTree = "<group>"; };
@@ -261,7 +263,7 @@
 		652D5E9D225F2F3C0045BBCC /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				652D5E9E225F2F5F0045BBCC /* IntercatorProvider.swift */,
+				652D5E9E225F2F5F0045BBCC /* InteractorProvider.swift */,
 				652D5EA0225F2F780045BBCC /* ViewModelProvider.swift */,
 				CEC26C002358831500A67097 /* WXRouter.swift */,
 				652D5EA2225F2F8D0045BBCC /* WXProvider.swift */,
@@ -479,6 +481,7 @@
 				652B78E71FFFC1B600BA34BD /* NetworkManager.swift */,
 				652B78F51FFFC80900BA34BD /* Sound.swift */,
 				CE0D455D22D47F3700632D67 /* SweetHMAC.swift */,
+				CEB952912386CDD40030EEC1 /* WXColors.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -808,7 +811,7 @@
 				652D5EB0225F3CDC0045BBCC /* LightViewController.swift in Sources */,
 				65191F33204E7EC900259A54 /* NoInternetView.swift in Sources */,
 				CEF707AB22B9292D002EF687 /* UIImageViewEx.swift in Sources */,
-				652D5E9F225F2F5F0045BBCC /* IntercatorProvider.swift in Sources */,
+				652D5E9F225F2F5F0045BBCC /* InteractorProvider.swift in Sources */,
 				65C9B710225B58010037E6B4 /* RxEx.swift in Sources */,
 				658AF4F4225CF1FF00F9DB36 /* IntEx.swift in Sources */,
 				657BA3561FC4580C00557E0B /* UIViewControllerEx.swift in Sources */,
@@ -831,6 +834,7 @@
 				657BA34B1FC453C500557E0B /* Utils.swift in Sources */,
 				CEEA6E5822A7FBC000932E4D /* RObject.swift in Sources */,
 				657BA3471FC4536200557E0B /* NotificationEx.swift in Sources */,
+				CEB952922386CDD40030EEC1 /* WXColors.swift in Sources */,
 				652B78F11FFFC2E700BA34BD /* Footer.swift in Sources */,
 				657BA36E1FC45BB700557E0B /* DoubleEx.swift in Sources */,
 				657BA3451FC4532A00557E0B /* Protocols.swift in Sources */,

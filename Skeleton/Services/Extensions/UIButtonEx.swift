@@ -22,16 +22,16 @@ extension UIButton {
         }
     }
 
-    /// 0 => .ScaleToFill
-    /// 1 => .ScaleAspectFit
-    /// 2 => .ScaleAspectFill
+    // 0 => .ScaleToFill
+    // 1 => .ScaleAspectFit
+    // 2 => .ScaleAspectFill
     @IBInspectable
     var imageContentMode: Int {
         get {
             return self.imageView?.contentMode.rawValue ?? 0
         }
         set {
-            if let mode = UIView.ContentMode(rawValue: imageContentMode),
+            if let mode = UIView.ContentMode(rawValue: newValue),
                 self.imageView != nil {
                 self.imageView?.contentMode = mode
             }
@@ -64,14 +64,5 @@ extension UIButton {
             titleLabel?.numberOfLines = newValue
         }
     }
-
-//    override open var isHighlighted: Bool {
-//        didSet {
-//            if tag != 888 {
-//                return
-//            }
-//            alpha = isHighlighted == true ? 0.5 : 1
-//        }
-//    }
 
 }

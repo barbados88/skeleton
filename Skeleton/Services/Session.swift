@@ -119,12 +119,4 @@ class Session: NSObject {
         }
     }
 
-    static var tintColor: UIColor {
-        return UIColor(red: 173 / 255.0, green: 20 / 255.0, blue: 47 / 255.0, alpha: 1)
-    }
-
-    static var appRedColor: UIColor {
-        return UIColor(red: 254 / 255, green: 56 / 255.0, blue: 36 / 255.0, alpha: 1)
-    }
-
 }

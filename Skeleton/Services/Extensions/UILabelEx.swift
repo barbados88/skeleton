@@ -22,7 +22,7 @@ extension UILabel {
         } catch {
             dotRanges = []
         }
-        let rangeColor = Session.tintColor
+        let rangeColor = WXColors.mainAppColor.color
         for dotRange in dotRanges {
             attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: rangeColor, range: dotRange)
         }

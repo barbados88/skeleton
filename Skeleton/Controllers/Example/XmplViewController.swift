@@ -149,7 +149,7 @@ class ResponseClass: Info {
                 super.init()
                 info = DefaultObject()
                 info?.title = with.conditions
-                info?.details = "+\(with.temperature) C"
+                info?.details = "\(with.temperature) C"
             }
 
         }
