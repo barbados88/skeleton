@@ -5,29 +5,48 @@ enum TabBarAnimationType {
     case simple
     case circular
 
+    var classObject: WXAnimation {
+        switch self {
+        case .simple: return SimpleAnimation()
+        case .circular: return CircularAnimation()
+        }
+    }
+    
+}
+
+class WXAnimation: NSObject {
+    
+    var tabBar: UITabBar! {
+        didSet {
+            customInit()
+        }
+    }
+    
+    public func animate(to: Int) {}
+ 
+    public func customInit() {}
+    
 }
 
 class TabBarAnimation: NSObject {
 
-    var type: TabBarAnimationType = .simple
+    var type: TabBarAnimationType = .simple {
+        didSet {
+            animation = type.classObject
+        }
+    }
     private var tabBar: UITabBar = UITabBar()
-    private var simple: SimpleAnimation = SimpleAnimation()
-    private var circular: CircularAnimation = CircularAnimation()
+    private var animation: WXAnimation!
 
-    public init(with bar: UITabBar) {
+    public init(with bar: UITabBar, animation: TabBarAnimationType) {
         super.init()
         tabBar = bar
+        type = animation
     }
 
     open func animateTo(index: Int) {
-        switch type {
-        case .simple:
-            simple.tabBar = tabBar
-            simple.animate(to: index)
-        case .circular:
-            circular.tabBar = tabBar
-            circular.transitionTo(index: index)
-        }
+        animation.tabBar = tabBar
+        animation.animate(to: index)
     }
 
 }

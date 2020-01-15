@@ -1,11 +1,10 @@
 import UIKit
 
-class SimpleAnimation: NSObject {
+class SimpleAnimation: WXAnimation {
 
     private var duration: TimeInterval = 0.5
-    var tabBar: UITabBar = UITabBar()
 
-    func animate(to index: Int) {
+    override func animate(to index: Int) {
         playBounceAnimation(getImageView(at: index))
     }
 

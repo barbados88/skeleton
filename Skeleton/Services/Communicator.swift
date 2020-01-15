@@ -10,7 +10,7 @@ class Communicator: NSObject {
 
     typealias block = ((Any) -> Void)?
 
-    private class func sendRequest(request: String, method: Alamofire.HTTPMethod, parameters: [String: Any]? = nil, completion: @escaping([String: Any]) -> Void) {
+    class func sendRequest(request: String, method: Alamofire.HTTPMethod, parameters: [String: Any]? = nil, completion: @escaping([String: Any]) -> Void) {
         Requester.sendRequest(request: request, method: method, parameters: parameters, completion: { response in
             completion(response)
         })

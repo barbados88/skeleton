@@ -12,8 +12,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        animation = TabBarAnimation(with: tabBar)
-        animation?.type = .circular
+        animation = TabBarAnimation(with: tabBar, animation: .circular)
         addObservers()
     }
 

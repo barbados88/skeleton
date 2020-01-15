@@ -111,7 +111,6 @@ class RequesterRx: NSObject {
     }
 
     func sendRequest<T: Mappable>(request: String, method: Alamofire.HTTPMethod, parameters: [String: Any]? = nil, headers: [String: String]? = nil) -> Observable<WXResponse<T>> {
-
         // use retrier if needed
 
         cancelRequestIfExisted(request)
@@ -124,6 +123,7 @@ class RequesterRx: NSObject {
             .flatMap { response -> Observable<WXResponse<T>> in
                 return self.validator.checkResponse(response: response)
         }
+        
     }
 
     func cancelAll() {
@@ -178,12 +178,15 @@ class Requester: NSObject {
             return
         }
         let encoding: ParameterEncoding = method == .get ? URLEncoding.default : JSONEncoding.default
-        manager.request(request, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { response in
+        manager
+            .request(request, method: method, parameters: parameters, encoding: encoding, headers: headers)
+            .responseJSON(completionHandler: { response in
             saveCookies(response: response)
             ResponseValidator.checkResponse(response: response, completion: { response in
                 completion(response)
             })
         })
+        
     }
 
     private func listenToReachability() {

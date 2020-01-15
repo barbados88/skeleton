@@ -5,6 +5,7 @@ PODS:
   - Apollo/Core (0.13.0)
   - Crashlytics (3.13.4):
     - Fabric (~> 1.10.2)
+  - DataCompression (3.6.0)
   - Differentiator (4.0.1)
   - Fabric (1.10.2)
   - ObjectMapper (3.5.1)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - Alamofire
   - Apollo
   - Crashlytics
+  - DataCompression
   - Fabric
   - ObjectMapper
   - ReachabilitySwift
@@ -52,10 +54,11 @@ DEPENDENCIES:
   - SDWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Apollo
     - Crashlytics
+    - DataCompression
     - Differentiator
     - Fabric
     - ObjectMapper
@@ -74,6 +77,7 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Apollo: 603a59c12046c50f3188f4e5dfdae080d20ded55
   Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
+  DataCompression: 06628f9c807b6f152e0da37635633f62fc51dc77
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
@@ -88,6 +92,6 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
 
-PODFILE CHECKSUM: 444187254ca33e4565191cf94104825849851d8c
+PODFILE CHECKSUM: e005b45ac65e25c1c631c39d6b9bff466bb44830
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

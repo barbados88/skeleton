@@ -175,6 +175,8 @@ class XmplViewController: DarkViewController {
         return WXProvider.shared.mProvider.viewModel
     }()
 
+    private let generator: WXKeyGenerator = WXKeyGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -182,6 +184,8 @@ class XmplViewController: DarkViewController {
         // Rx - initRxTable
         // iOs natural - initTable
         initTable()
+        generator.generate()
+        generator.post()
     }
     
     // MARK: - Actions

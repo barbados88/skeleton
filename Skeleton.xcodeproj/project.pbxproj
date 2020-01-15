@@ -111,6 +111,8 @@
 		65EC5E271FC4280700EA7857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EC5E251FC4280700EA7857 /* LaunchScreen.storyboard */; };
 		65F3521522647B98004100EC /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3521422647B98004100EC /* ExampleObject.swift */; };
 		CE0D455E22D47F3700632D67 /* SweetHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D455D22D47F3700632D67 /* SweetHMAC.swift */; };
+		CE9110C423955A2000CF6B3A /* WXKeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9110C323955A2000CF6B3A /* WXKeyGenerator.swift */; };
+		CE9110C623955A7B00CF6B3A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9110C523955A7B00CF6B3A /* Security.framework */; };
 		CE98FF4422C397E600D758BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE98FF4322C397E600D758BD /* Localizable.strings */; };
 		CEB952922386CDD40030EEC1 /* WXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB952912386CDD40030EEC1 /* WXColors.swift */; };
 		CEC26C012358831500A67097 /* WXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC26C002358831500A67097 /* WXRouter.swift */; };
@@ -230,6 +232,8 @@
 		65EC5E281FC4280700EA7857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65F3521422647B98004100EC /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
 		CE0D455D22D47F3700632D67 /* SweetHMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetHMAC.swift; sourceTree = "<group>"; };
+		CE9110C323955A2000CF6B3A /* WXKeyGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXKeyGenerator.swift; sourceTree = "<group>"; };
+		CE9110C523955A7B00CF6B3A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CE98FF4322C397E600D758BD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CEB952912386CDD40030EEC1 /* WXColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXColors.swift; sourceTree = "<group>"; };
 		CEC26C002358831500A67097 /* WXRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXRouter.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9110C623955A7B00CF6B3A /* Security.framework in Frameworks */,
 				5ACC60595E2704E0D3254A52 /* Pods_Skeleton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +260,7 @@
 		11520D10C0AE271F8289FCF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9110C523955A7B00CF6B3A /* Security.framework */,
 				1D65AADE0A5A5F1C17AAD7CC /* Pods_Skeleton.framework */,
 			);
 			name = Frameworks;
@@ -482,6 +488,7 @@
 				652B78F51FFFC80900BA34BD /* Sound.swift */,
 				CE0D455D22D47F3700632D67 /* SweetHMAC.swift */,
 				CEB952912386CDD40030EEC1 /* WXColors.swift */,
+				CE9110C323955A2000CF6B3A /* WXKeyGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -698,6 +705,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Skeleton/Pods-Skeleton-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/DataCompression/DataCompression.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
@@ -715,6 +723,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DataCompression.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
@@ -859,6 +868,7 @@
 				652B78E51FFFC18D00BA34BD /* UILabelEx.swift in Sources */,
 				658AF4F6225CF1FF00F9DB36 /* NSAttributedStringEx.swift in Sources */,
 				652D5EA7225F2FEA0045BBCC /* ExampleViewModel.swift in Sources */,
+				CE9110C423955A2000CF6B3A /* WXKeyGenerator.swift in Sources */,
 				CEC26C012358831500A67097 /* WXRouter.swift in Sources */,
 				65ADEA36220DC55400BA2A96 /* WXTableConstructor.swift in Sources */,
 				657BA33F1FC44DA200557E0B /* ServerError.swift in Sources */,

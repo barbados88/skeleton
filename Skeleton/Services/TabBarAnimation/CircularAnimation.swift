@@ -1,17 +1,12 @@
 import UIKit
 
-class CircularAnimation: NSObject {
+class CircularAnimation: WXAnimation {
 
     private let lineWidth: CGFloat = 1.5
     private let duration: TimeInterval = 0.7
     private let lineColor: UIColor = WXColors.mainAppColor.color
     private let animationContainer: UIView = UIView()
 
-    var tabBar: UITabBar = UITabBar() {
-        didSet {
-            customInit()
-        }
-    }
     var currentIndex: Int = 0
 
     private lazy var radius: CGFloat = {
@@ -26,7 +21,7 @@ class CircularAnimation: NSObject {
         customInit()
     }
 
-    func customInit() {
+    override func customInit() {
         animationContainer.backgroundColor = .clear
         animationContainer.isUserInteractionEnabled = false
         animationContainer.frame = tabBar.bounds
@@ -37,7 +32,7 @@ class CircularAnimation: NSObject {
         return CGPoint(x: itemWidth * CGFloat(index) + itemWidth / 2, y: animationContainer.frame.height / 2 - 5)
     }
 
-    func transitionTo(index: Int) {
+    override func animate(to index: Int) {
         if index == currentIndex { return }
 
         let layer = CAShapeLayer()

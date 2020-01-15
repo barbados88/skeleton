@@ -18,5 +18,6 @@ target 'Skeleton' do
 	pod 'RxSwift'
   	pod 'RxCocoa'
 	pod 'RxDataSources'
+	pod 'DataCompression'
 
 end
